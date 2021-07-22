@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <input
+    type="text"
+    matInput
+    placeholder="Search"
+    [value]="searchValue"
+    #inputSearch
+  />
+  <mat-icon (click)="onSearch(inputSearch.value)">search</mat-icon>
+</mat-toolbar>

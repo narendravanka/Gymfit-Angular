@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>{{ gym?.name }}</mat-card-title>
+  <mat-card-content>
+    <p>Rating : {{ gym?.rating }}</p>
+    <p>Price : {{ gym?.price }}/monthly</p>
+    <img [src]="gym?.iconUrl" alt="Gym logo" width="300" />
+    <p>{{ gym?.description }}</p>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,9 @@
+<div class="grid-items">
+  <div
+    class="item"
+    *ngFor="let gym of gyms"
+    [routerLink]="'/products/' + gym.id"
+  >
+    <app-gyms-card [gym]="gym"> </app-gyms-card>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<mat-card *ngIf="product">
+  <mat-card-title>{{ product?.name }}</mat-card-title>
+
+  <mat-card-content>
+    <p>Rating : {{ product?.rating }}</p>
+    <p>Price : {{ product?.price }}/monthly</p>
+    <img [src]="product?.iconUrl" alt="product logo" width="300" />
+    <p>Achieve : {{ product?.description }}</p>
+    <p>About : {{ product?.longDescription }}</p>
+    <p>Address : {{ product?.address }}</p>
+    <h4>Contact number :</h4>
+    <h4>Email :</h4>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button [routerLink]="'/placeorder/' + product.id">
+      Buy
+    </button>
+  </mat-card-actions>
+</mat-card>

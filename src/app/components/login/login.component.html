@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="loginForm">
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input
+          type="email"
+          matInput
+          placeholder="Ex. Tiger@Tigerfit.com"
+          value=""
+          formControlName="email"
+        />
+        <mat-error *ngIf="getEmail().errors?.required">
+          email required</mat-error
+        >
+        <mat-error *ngIf="getEmail().errors?.email"
+          >Please enter valid email</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>password</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="password"
+          [ngClass]="{ 'is-invalid': submitted && getPassword().errors }"
+        />
+        <mat-error *ngIf="getPassword().errors?.required"
+          >password required</mat-error
+        >
+        <mat-error *ngIf="getPassword().errors?.minlength"
+          >Password should be greater than 8 charecters</mat-error
+        >
+        <mat-error *ngIf="getPassword().errors?.maxlength"
+          >Password should be less than 20 charecters</mat-error
+        >
+      </mat-form-field>
+    </form>
+    <mat-card-actions>
+      <button
+        class="login-button"
+        color="primary"
+        mat-raised-button
+        type="submit"
+        (click)="onLogin()"
+        [disabled]="!loginForm.valid"
+      >
+        Login
+      </button>
+
+      <button mat-raised-button routerLink="/register" color="primary">
+        Register
+      </button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

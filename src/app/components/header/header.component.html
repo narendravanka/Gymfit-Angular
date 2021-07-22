@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button routerLink="/">
+    <h1 class="logo">Tigerfit</h1>
+  </button>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/club">Club</button>
+  <button mat-button routerLink="/contact">Contact Us</button>
+
+  <button mat-button *ngIf="!email" routerLink="/login">Login</button>
+  <button mat-raised-button *ngIf="email" (click)="onSignOut()">
+    {{ email }}
+  </button>
+</mat-toolbar>

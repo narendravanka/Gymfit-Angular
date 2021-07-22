@@ -1,0 +1,8 @@
+<div>
+  <h1>order Conformation</h1>
+  <app-gyms-card
+    [gym]="product"
+    [routerLink]="'/products/' + product?.id"
+  ></app-gyms-card>
+  <button mat-raised-button (click)="proceedToBuy()">Proceed to Buy</button>
+</div>

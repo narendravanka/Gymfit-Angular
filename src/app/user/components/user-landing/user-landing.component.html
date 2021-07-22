@@ -1,0 +1,7 @@
+<!-- <app-menu-wrapper></app-menu-wrapper> -->
+<mat-card>
+  <div class="grid-items">
+    <app-gyms-card *ngFor="let gym of gyms" [gym]="gym"> </app-gyms-card>
+  </div>
+</mat-card>
+<router-outlet></router-outlet>
