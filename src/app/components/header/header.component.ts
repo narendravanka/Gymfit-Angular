@@ -9,17 +9,24 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  email: string | null = null;
+  email!: string;
   constructor(private dataService: DataService, private router: Router) {}
 
   ngOnInit(): void {
+    const data = this.dataService.getLoginInfo();
+    if (data) {
+      this.dataService.setLoginInfo(data);
+      this.email = data;
+    }
     this.dataService.getLoginInfoSub().subscribe((loginInfo: any) => {
-      if (loginInfo.email) this.email = loginInfo.email.split('@')[0];
+      if (loginInfo.email) {
+        this.email = loginInfo.email.split('@')[0];
+      }
     });
   }
   onSignOut() {
-    this.email = null;
-    this.dataService.setLoginInfo(null);
+    this.email = '';
+    this.dataService.setLoginInfo('');
     this.router.navigateByUrl('/login');
   }
 }

@@ -3,7 +3,7 @@
 
   <mat-card-content>
     <p>Rating : {{ product?.rating }}</p>
-    <p>Price : {{ product?.price }}/monthly</p>
+    <p>Price : {{ product?.price | currency: "INR" }}/monthly</p>
     <img [src]="product?.iconUrl" alt="product logo" width="300" />
     <p>Achieve : {{ product?.description }}</p>
     <p>About : {{ product?.longDescription }}</p>

@@ -5,7 +5,10 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { PlaceorderComponent } from './components/placeorder/placeorder.component';
+import {
+  OrderSuccessComponent,
+  PlaceorderComponent,
+} from './components/placeorder/placeorder.component';
 import { ProductComponent } from './components/product/product.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchComponent } from './components/search/search.component';
@@ -52,6 +55,10 @@ const routes: Routes = [
   {
     path: 'to-do',
     component: ToDoComponent,
+  },
+  {
+    path: 'successful',
+    component: OrderSuccessComponent,
   },
   {
     path: 'user',

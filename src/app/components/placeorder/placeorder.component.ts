@@ -25,10 +25,8 @@ export class PlaceorderComponent implements OnInit {
   }
 
   proceedToBuy() {
-    if (
-      this.dataService.loginInfo.email &&
-      this.dataService.loginInfo.email != ''
-    ) {
+    const data = this.dataService.getLoginInfo();
+    if (data) {
       console.log('order booked successful');
       alert('success');
     } else {
@@ -47,7 +45,7 @@ export class PlaceorderComponent implements OnInit {
     </h1>
     <img [src]="product?.iconUrl" alt="logo" />`,
 })
-export class OrderSuccess implements OnInit {
+export class OrderSuccessComponent implements OnInit {
   product?: gymSchema;
   constructor(
     private gymService: GymService,

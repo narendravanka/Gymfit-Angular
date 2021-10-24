@@ -1,4 +1,5 @@
 mat-card {
+  width: max-content;
   margin-bottom: 20px;
   position: relative;
   border: solid lightgoldenrodyellow 1px;
@@ -7,6 +8,12 @@ mat-card {
   img {
     max-width: 100px;
   }
+  button {
+    flex: auto;
+    color: solid mediumpurple;
+    background-color: ghostwhite;
+  }
+  border: solid lightgoldenrodyellow 1.5px;
 }
 mat-card-actions {
   display: flex;

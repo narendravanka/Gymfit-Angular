@@ -21,7 +21,10 @@ import { SearchComponent } from './components/search/search.component';
 import { GymsCardComponent } from './components/gyms-card/gyms-card.component';
 import { ProductComponent } from './components/product/product.component';
 import { CommonModule } from '@angular/common';
-import { PlaceorderComponent } from './components/placeorder/placeorder.component';
+import {
+  OrderSuccessComponent,
+  PlaceorderComponent,
+} from './components/placeorder/placeorder.component';
 import { MenuWrapperComponent } from './components/menu-wrapper/menu-wrapper.component';
 import { ToDoComponent } from './components/to-do/to-do.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -44,6 +47,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     MenuWrapperComponent,
     ToDoComponent,
     PageNotFoundComponent,
+    OrderSuccessComponent,
   ],
   imports: [
     BrowserModule,

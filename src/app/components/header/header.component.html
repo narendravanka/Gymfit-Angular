@@ -6,8 +6,8 @@
   <button mat-button routerLink="/club">Club</button>
   <button mat-button routerLink="/contact">Contact Us</button>
 
-  <button mat-button *ngIf="!email" routerLink="/login">Login</button>
   <button mat-raised-button *ngIf="email" (click)="onSignOut()">
     {{ email }}
   </button>
+  <button mat-button *ngIf="!email" routerLink="/login">Login</button>
 </mat-toolbar>

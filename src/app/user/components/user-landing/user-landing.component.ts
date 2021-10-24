@@ -15,6 +15,6 @@ export class UserLandingComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.authService.getGyms().subscribe((data) => (this.gyms = data));
+    this.authService.getGyms().subscribe((data ) => (this.gyms = data));
   }
 }
